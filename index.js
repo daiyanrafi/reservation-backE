@@ -55,7 +55,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(8800, () => {
+app.listen(process.env.PORT, () => {
   connect();
   console.log("connected BACKEND to 8800");
 });
