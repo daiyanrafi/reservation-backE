@@ -44,6 +44,7 @@ app.use("/api/rooms", roomsRoute);
 
 //error handler
 app.use((err, req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "true");
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "wrong frm index.js";
   return res.status(errorStatus).json({
